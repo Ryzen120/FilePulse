@@ -1,0 +1,10 @@
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\bin\Debug\FilePulse.exe.config
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\bin\Debug\FilePulse.exe
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\bin\Debug\FilePulse.pdb
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.AssemblyReference.cache
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.Properties.Resources.resources
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.GenerateResource.cache
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.CoreCompileInputs.cache
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.exe
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.pdb
+C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.FilePulseGUI.resources
