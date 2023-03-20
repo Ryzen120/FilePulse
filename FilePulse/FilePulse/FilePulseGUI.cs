@@ -46,18 +46,8 @@ namespace FilePulse
 
         private void m_TextBoxSleepTime_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                gSleepTime = Convert.ToInt32(m_TextBoxSleepTime.Text);
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Error occured with sleep time " + ex.Message);
-            }
-            finally
-            {
-                gSleepTime = 600000;
-            }
+        
+            gSleepTime = Convert.ToInt32(m_TextBoxSleepTime.Text);
         }
 
         private void m_ButtonCancel_Click(object sender, EventArgs e)

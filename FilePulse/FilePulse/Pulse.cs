@@ -8,7 +8,6 @@ namespace FilePulse
     class Pulse
     {
         private int gSleepTime;
-        private string gPhoneNumber;
         private string gFilePath;
 
         string gEmailFrom;
