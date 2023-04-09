@@ -8,3 +8,13 @@ C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.CoreC
 C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.exe
 C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.pdb
 C:\Users\Bobby\source\repos\FilePulse\FilePulse\obj\Debug\FilePulse.FilePulseGUI.resources
+C:\GIT\FilePulse\FilePulse\FilePulse\bin\Debug\FilePulse.exe.config
+C:\GIT\FilePulse\FilePulse\FilePulse\bin\Debug\FilePulse.exe
+C:\GIT\FilePulse\FilePulse\FilePulse\bin\Debug\FilePulse.pdb
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.AssemblyReference.cache
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.FilePulseGUI.resources
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.Properties.Resources.resources
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.GenerateResource.cache
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.csproj.CoreCompileInputs.cache
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.exe
+C:\GIT\FilePulse\FilePulse\FilePulse\obj\Debug\FilePulse.pdb

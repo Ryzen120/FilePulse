@@ -6,7 +6,7 @@ namespace FilePulse
 {
     public partial class FilePulseGUI : Form
     {
-        private int gSleepTime;
+        private string gSleepTime;
         private string gFilePath;
 
         string gEmailFrom;
@@ -16,7 +16,6 @@ namespace FilePulse
 
         public FilePulseGUI()
         {
-            gSleepTime = 0;
             InitializeComponent();
         }
 
@@ -24,30 +23,37 @@ namespace FilePulse
         {
             m_LabelError.Visible = false;
 
-            if(String.IsNullOrEmpty(gEmailTo) || String.IsNullOrEmpty(gEmailFrom) || String.IsNullOrEmpty(gEmailFromPassword) || String.IsNullOrEmpty(gFilePath) || gSleepTime < 5000)
+            Globals.Cancelled = false;
+            m_LabelRunning.Visible = true;
+            Task task1 = Task.Factory.StartNew(() => new Pulse(this, gSleepTime, gFilePath, gEmailDomain, gEmailFrom, gEmailFromPassword, gEmailTo));
+
+            await task1;
+            m_LabelRunning.Visible = false;
+        }
+
+        private void CheckAllFields()
+        {
+            if (String.IsNullOrEmpty(gEmailTo) || String.IsNullOrEmpty(gEmailFrom) || String.IsNullOrEmpty(gEmailFromPassword) || String.IsNullOrEmpty(gFilePath) || String.IsNullOrEmpty(gSleepTime))
             {
-                m_LabelError.Visible = true;
+                m_ButtonRun.Enabled = false;
             }
             else
             {
-                Globals.Cancelled = false;
-                m_LabelRunning.Visible = true;
-                Task task1 = Task.Factory.StartNew(() => new Pulse(this, gSleepTime, gFilePath, gEmailDomain, gEmailFrom, gEmailFromPassword, gEmailTo));
-
-                await task1;
-                m_LabelRunning.Visible = false;
+                m_ButtonRun.Enabled = true;
             }
         }
 
         private void m_TextBoxPath_TextChanged(object sender, EventArgs e)
         {
             gFilePath = m_TextBoxPath.Text;
+            CheckAllFields();
         }
 
         private void m_TextBoxSleepTime_TextChanged(object sender, EventArgs e)
         {
         
-            gSleepTime = Convert.ToInt32(m_TextBoxSleepTime.Text);
+            gSleepTime = m_TextBoxSleepTime.Text;
+            CheckAllFields();
         }
 
         private void m_ButtonCancel_Click(object sender, EventArgs e)
@@ -58,16 +64,19 @@ namespace FilePulse
         private void emailFrom_TextChanged(object sender, EventArgs e)
         {
             gEmailFrom = emailFrom.Text;
+            CheckAllFields();
         }
 
         private void emailFromPass_TextChanged(object sender, EventArgs e)
         {
             gEmailFromPassword = emailFromPass.Text;
+            CheckAllFields();
         }
 
         private void emailTo_TextChanged(object sender, EventArgs e)
         {
             gEmailTo = emailTo.Text;
+            CheckAllFields();
         }
 
         private void m_ButtonBrowse_Click(object sender, EventArgs e)
@@ -80,7 +89,9 @@ namespace FilePulse
             {
                 string folderName = folderDialogBrowser1.SelectedPath;
                 m_TextBoxPath.Text = folderName;
+
             }
+            CheckAllFields();
         }
     }
 }
